@@ -1,0 +1,6 @@
+---
+runtime: lamp  
+
+# lamp apache+mysql+php-fpm
+# lnmp nginx+mysql+php-fpm
+# lnmt nginx+mysql+tomcat
