@@ -16,8 +16,8 @@
 
 - name: Support PHP
   copy:
-    src: php.conf
-    dest: /etc/nginx/extra/
+    src: nginx-php.conf
+    dest: /etc/nginx/extra/php.conf
 
 - name: Copy Default Vhost config
   copy: 
