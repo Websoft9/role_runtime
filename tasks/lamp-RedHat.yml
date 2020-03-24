@@ -1,6 +1,6 @@
 - name: Configure PHP-FPM
   copy:
-    src: centos-php-fpm.conf
+    src: www.conf.jinja2
     dest: /etc/php-fpm.d/www.conf
 
 - name: Restart PHP-FPM

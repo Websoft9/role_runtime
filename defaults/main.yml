@@ -1,6 +1,20 @@
 ---
 runtime: lamp  
-
 # lamp apache+mysql+php-fpm
 # lnmp nginx+mysql+php-fpm
-# lnmt nginx+mysql+tomcat
+
+phpfpm_user: 
+  RedHat:
+    lamp:
+      user: apache
+      group: apache
+    lnmp:
+      user: nginx
+      group: nginx
+  Debian:
+    lamp:
+      user: www-data
+      group: www-data
+    lnmp:
+      user: www-data
+      group: www-data

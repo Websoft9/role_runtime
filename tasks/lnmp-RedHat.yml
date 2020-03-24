@@ -1,6 +1,6 @@
 - name: Configure PHP-FPM
   template:
-    src: cnetos-php-fpm.jinja2
+    src: www.conf.jinja2
     dest: /etc/php-fpm.d/www.conf
 
 - name: Restart PHP-FPM
