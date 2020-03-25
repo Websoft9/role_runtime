@@ -1,5 +1,5 @@
 ---
-runtime: lamp  
+runtime_name: lamp  
 # lamp apache+mysql+php-fpm
 # lnmp nginx+mysql+php-fpm
 
