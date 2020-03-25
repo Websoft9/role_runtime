@@ -1,5 +1,5 @@
 - name: Configure PHP-FPM
-  copy:
+  template:
     src: www.conf.jinja2
     dest: /etc/php-fpm.d/www.conf
 
