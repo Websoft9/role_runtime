@@ -2,6 +2,7 @@
 runtime_name: lamp  
 # lamp apache+mysql+php-fpm
 # lnmp nginx+mysql+php-fpm
+# lcmp caddy+mysql+php-fpm
 
 phpfpm_user: 
   RedHat:
