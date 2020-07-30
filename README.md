@@ -1,38 +1,62 @@
-Role Name
+Ansible Role: Runtime
 =========
 
-A brief description of the role goes here.
+This Role used for connection between language and HTTP server & WebServe. e.g LAMP/LNMP
 
-Requirements
-------------
+## Requirements
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Make sure these requirements need before the installation
 
-Role Variables
---------------
+| **Items**      | **Details** |
+| ------------------| ------------------|
+| Operating system | CentOS7.x Ubuntu18.04 AmazonLinux|
+| Python version | Python2  |
+| Python Components |    |
+| Runtime |  |
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
 
-Dependencies
-------------
+## Related roles
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+This Role does not depend on other role variables in syntax, but it depend on other role before
 
-Example Playbook
-----------------
+```
+  roles:
+    - {role: role_common, tags: "role_common"}
+    - {role: role_template, tags: "role_template"}
+```
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+## Variables
 
-License
--------
+The main variables of this Role and how to use them are as follows:
 
-BSD
+| **Items**      | **Details** | **Format**  | **Need to assignment** |
+| ------------------| ------------------|-----|-----|
+| template_applications | True, False | Boolean | No |
 
-Author Information
-------------------
+notes: 
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+1. ×××××××
+2. ×××××××
+
+## Example
+
+```
+- name: Memcached
+  hosts: all
+  become: yes
+  become_method: sudo 
+  vars_files:
+    - vars/main.yml 
+
+  roles:
+    - {role: role_common, tags: "role_common"}
+    - {role: role_cloud, tags: "role_cloud"}
+    - {role: role_template, tags: "role_template"}
+```
+
+## FAQ
+
+1. Every role name must start with **role_**
+2. Minimal dependence other roles
+3. Variable must reasonable, and program syntax complete
