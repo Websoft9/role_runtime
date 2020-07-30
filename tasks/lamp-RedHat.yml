@@ -24,7 +24,10 @@
 - name: Copy Default Vhost config
   copy: 
     src: centos-apache-vhost.conf
-    dest: /etc/httpd/vhost/vhost.conf
+    dest: /etc/httpd/conf.d/vhost.conf
+    
+- name: Create soft link for vhost.conf
+  shell: ln -sf /etc/httpd/conf.d/vhost.conf  /etc/httpd/vhost
 
 - name: Restart Apache
   service:
