@@ -9,11 +9,6 @@
     state: restarted
     enabled: yes
 
-- name: Create extra Dir
-  file:
-    path: /etc/nginx/extra
-    state: directory
-
 - name: Support PHP
   copy:
     src: nginx-php.conf
