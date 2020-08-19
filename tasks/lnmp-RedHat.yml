@@ -14,13 +14,6 @@
     src: nginx-php.conf
     dest: /etc/nginx/extra/php.conf
 
-- name: Copy Default Vhost config and rewrite
-  copy: 
-    src: "{{item.src}}" 
-    dest: "{{item.dest}}"
-  with_items:
-    - {src: rewrite, dest: /etc/nginx/conf.d}
-
 - name: Restart Nginx
   service:
     name: nginx
